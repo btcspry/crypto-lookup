@@ -18,7 +18,7 @@
   ],
 
   "background": {
-    "scripts": ["libs/underscore-min.js","background.js"],
+    "scripts": ["libs/underscore-min.js","libs/contextManagement.js","background.js"],
     "persistent": false
   },
 
@@ -29,10 +29,6 @@
     }
   ],
 
-  "page_action": {
-    "default_title": "Crypto Lookup",
-    "default_icon": "images/logo-16.png",
-    "default_popup": "popup.html"
-  }
+  "options_page": "options.html"
 
 }
