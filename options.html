@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>My Test Extension Options</title>
+        <title>CryptoLookup Options</title>
     </head>
     <body>
         <label for="enable_extension">Enable Extension?</label>
@@ -10,36 +10,33 @@
         <br>
         <label for="btc_explorer">Bitcoin Block Explorer: </label>
         <select id="btc_explorer">
-          <option value="1">blockchain.info</option>
-          <option value="2">blockcypher.com</option>
-          <option value="3">blockr.io</option>
-          <option value="4">chain.so</option>
+          <option value="1">Blockchain.info</option>
+          <option value="2">BlockCypher</option>
+          <option value="3">Chain.so</option>
+          <option value="4">Blockr</option>
         </select>
         <br>
 
         <label for="ltc_explorer">Litecoin Block Explorer: </label>
         <select id="ltc_explorer">
           <option value="1">block-explorer.com</option>
-          <option value="2">blockcypher.com</option>
-          <option value="3">blockr.io</option>
-          <option value="4">chain.so</option>
-          <option value="5">explorer.litecoin.net</option>
+          <option value="2">BlockCypher</option>
+          <option value="3">Chain.so</option>
+          <option value="4">Blockr</option>
         </select>
         <br>
 
         <label for="doge_explorer">Dogecoin Block Explorer: </label>
         <select id="doge_explorer">
-          <option value="1">dogechain.info</option>
-          <option value="2">blockcypher.com</option>
-          <option value="3">bkchain.org</option>
-          <option value="4">chain.so</option>
-          <option value="5">explorer.litecoin.net</option>
+          <option value="1">Dogechain.info</option>
+          <option value="2">BlockCypher</option>
+          <option value="3">Chain.so</option>
         </select>
 
         <div id="status"></div>
 
         <button id="save">Save</button>
-        <script src="contextManagement.js"></script>
+        <script src="libs/contextManagement.js"></script>
         <script src="options.js"></script>
     </body>
 </html>
