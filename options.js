@@ -26,7 +26,7 @@ function save_options() {
     if (extensionEnabled) { createContextMenu(); }
 }
 
-// Restores select box and checkbox state using the preferences stored in chrome.storage.
+// Restores the option states (making them appear persistent) using the preferences stored in chrome.storage.
 function restore_options() {
     // First param of sync.get sets the defaults
     chrome.storage.sync.get({
@@ -35,10 +35,10 @@ function restore_options() {
         "ltcExplorer": "1",
         "dogeExplorer": "1"
     }, function(items) {
-        document.getElementById('enable_extension').checked = items.likesColor;
-        document.getElementById('btcExplorer').value = items.btcExplorer;
-        document.getElementById('ltcExplorer').value = items.ltcExplorer;
-        document.getElementById('dogeExplorer').value = items.dogeExplorer;
+        document.getElementById('enable_extension').checked = items.extensionEnabled;
+        document.getElementById('btc_explorer').value = items.btcExplorer;
+        document.getElementById('ltc_explorer').value = items.ltcExplorer;
+        document.getElementById('doge_explorer').value = items.dogeExplorer;
     });
 }
 
