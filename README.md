@@ -22,4 +22,6 @@ Keep in mind that it is currently in beta, but we plan on releasing a stable ver
 ## Features (Coming Soon):
 - Hover over address to display options
 - Hide options in context menu when non-cryptographic string is selected
+- Check if TX hash exists, and automatically go to the right coin's TXID (check using API)
+	- Do the same with block hashes
 - Any suggestions? Open an issue to suggest a feature (or email us at btcspry@bitforwarder.com)
