@@ -7,17 +7,20 @@ To get started, install the extension in Chrome, right click on a bitcoin addres
 Keep in mind that it is currently in beta, but we plan on releasing a stable version soon!
 
 ## Our extension allows users to do the following:
-- Lookup Bitcoin Address
-- Lookup Litecoin Address
-- Lookup Dogecoin Address
-- Send to Bitcoin Address (create link to a *bitcoin:* URL)
-- Send to Litecoin Address
-- Send to Dogecoin Address
-- Lookup BTC, LTC, or DOGE Transaction ID (txid)
+- Look Up Address (Auto-Detects Address from bitcoin, litecoin, dogecoin) / Look Up Bitcoin TXID
+- Send To Address (Auto-Detects Address) - Create a *bitcoin:* link to allow easy opening in desktop wallet
+- Look Up BTC, LTC, or DOGE Transaction ID (txid)
 - Lookup Bitcoin Block Hash
+- Display QR Code of Text (doesn't have to be cryptocurrency-related)
 
 ## Features:
-- Change block explorer options
+- Change block explorer options (4+ Supported Explorers)
+- Supports altcoins:
+	- Bitcoin
+	- Litecoin
+	- Dogecoin
+	- Many more, depending on demand
+- For testing, open the following PasteBin in Chrome and right-click on each example to test: http://pastebin.com/2NYvCn10
 
 ## Features (Coming Soon):
 - Hover over address to display options
