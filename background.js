@@ -99,15 +99,15 @@ function contextClickHandler(info, tab) {
 		else if (itemID == "autoSendto") {
 			if(sText.replace(/ /g,'').match(/^[13][a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		        // Bitcoin Address
-		        url = sendtoConfig["BTCAddress"];
+		        url = sendtoConfig["BTC"];
 		    }
 		    else if(sText.replace(/ /g,'').match(/^L[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		    	// Litecoin Address
-		    	url = sendtoConfig["LTCAddress"];
+		    	url = sendtoConfig["LTC"];
 		    }
 		    else if(sText.replace(/ /g,'').match(/^D[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		    	// Dogecoin Address
-		    	url = sendtoConfig["DOGEAddress"];
+		    	url = sendtoConfig["DOGE"];
 		    }
 		    else {
 		        // Not a valid cryptocurrency address or tx format
