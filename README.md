@@ -28,3 +28,5 @@ Keep in mind that it is currently in beta, but we plan on releasing a stable ver
 - Check if TX hash exists, and automatically go to the right coin's TXID (check using API)
 	- Do the same with block hashes
 - Any suggestions? Open an issue to suggest a feature (or email us at btcspry@bitforwarder.com)
+
+Want to donate?  Of course you do! **1MF7hKShzq2iSV9ZZ9hEx6ATnHQpFtM7cF**
