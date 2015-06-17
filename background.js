@@ -54,6 +54,7 @@ function contextClickHandler(info, tab) {
 
         // Set the URL based on the config and the type of click
 		if (itemID.indexOf("lookup") > -1) {
+			// Note that the address lookup is never used anymore (it's automatic)
 			_.each(["Address","TX","Block"], function (textType) {
 				if (itemID.indexOf(textType) > -1) {
 					_.each(["BTC","LTC","DOGE"], function (coinType) {
@@ -64,14 +65,14 @@ function contextClickHandler(info, tab) {
 				}
 			});
 		}
-		else if (itemID.indexOf("sendto") > -1) {
+		/*else if (itemID.indexOf("sendto") > -1) {
 			_.each(["BTC","LTC","DOGE"], function (coinType) {
 				if (itemID.indexOf(coinType) > -1) {
 					url = sendtoConfig[coinType];
 					newtab = false;
 				}
 			});
-		}
+		} */
 		else if (itemID == "autoLookup") {
 			if(sText.replace(/ /g,'').match(/^[13][a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		        // Bitcoin Address
@@ -91,7 +92,26 @@ function contextClickHandler(info, tab) {
 		    }
 		    else {
 		        // Not a valid cryptocurrency address or tx format
-		        alert("Please select a valid cryptocurrency-related string.");
+		        alert("Please select a valid address (bitcoin, litecoin, or dogecoin only), or bitcoin TXID.");
+		        return 0;
+		    }
+		}
+		else if (itemID == "autoSendto") {
+			if(sText.replace(/ /g,'').match(/^[13][a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+		        // Bitcoin Address
+		        url = sendtoConfig["BTCAddress"];
+		    }
+		    else if(sText.replace(/ /g,'').match(/^L[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+		    	// Litecoin Address
+		    	url = sendtoConfig["LTCAddress"];
+		    }
+		    else if(sText.replace(/ /g,'').match(/^D[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+		    	// Dogecoin Address
+		    	url = sendtoConfig["DOGEAddress"];
+		    }
+		    else {
+		        // Not a valid cryptocurrency address or tx format
+		        alert("Please select a valid address (bitcoin, litecoin, or dogecoin only).");
 		        return 0;
 		    }
 		}

@@ -7,11 +7,17 @@ function createContextMenu() {
     // Add the new menu items
     chrome.contextMenus.create({
 		"id" : "autoLookup",
-	    "title" : "Auto-Lookup Text",
+	    "title" : "Look Up Address / Bitcoin TXID",
 	    "type" : "normal",
 	    "contexts" : ["selection"]
 	});
-	chrome.contextMenus.create({
+    chrome.contextMenus.create({
+		"id" : "autoSendto",
+	    "title" : "Send To Address",
+	    "type" : "normal",
+	    "contexts" : ["selection"]
+	});
+	/*chrome.contextMenus.create({
 		"id" : "lookupBTCAddress",
 	    "title" : "Look Up Bitcoin Address",
 	    "type" : "normal",
@@ -52,7 +58,7 @@ function createContextMenu() {
 	    "title" : "Look Up Bitcoin TXID",
 	    "type" : "normal",
 	    "contexts" : ["selection"]
-	});
+	});*/
 	chrome.contextMenus.create({
 		"id" : "lookupLTCTX",
 	    "title" : "Look Up Litecoin TXID",
