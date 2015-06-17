@@ -77,4 +77,10 @@ function createContextMenu() {
 	    "type" : "normal",
 	    "contexts" : ["selection"]
 	});
+	chrome.contextMenus.create({
+		"id" : "generateQR",
+	    "title" : "Generate QR Code",
+	    "type" : "normal",
+	    "contexts" : ["selection"]
+	});
 }

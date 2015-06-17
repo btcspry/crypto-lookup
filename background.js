@@ -17,7 +17,8 @@ function contextClickHandler(info, tab) {
         "extensionEnabled": true,
         "btcExplorer": "1",
         "ltcExplorer": "1",
-        "dogeExplorer": "1"
+        "dogeExplorer": "1",
+        "qrGenerator": "1"
     }, function(items) {
 
     	// The following static object is for debugging, and is replaced by the definition based on options stored in chrome.storage.sync
@@ -44,7 +45,9 @@ function contextClickHandler(info, tab) {
         	"BTCTX": ["https://blockchain.info/tx/", "https://live.blockcypher.com/btc/tx/", "https://chain.so/tx/BTC/", "https://btc.blockr.io/tx/info/"][items.btcExplorer-1],
         	"LTCTX": ["https://block-explorer.com/tx/", "https://live.blockcypher.com/ltc/tx/", "https://chain.so/tx/LTC/", "https://ltc.blockr.io/tx/info/"][items.ltcExplorer-1],
         	"DOGETX": ["https://dogechain.info/tx/", "https://live.blockcypher.com/doge/tx/", "https://chain.so/tx/DOGE/"][items.dogeExplorer-1],
-        	"BTCBlock": ["https://blockchain.info/block/", "https://live.blockcypher.com/btc/block/", "https://chain.so/block/BTC/", "https://btc.blockr.io/block/info/"][items.btcExplorer-1]
+
+        	"BTCBlock": ["https://blockchain.info/block/", "https://live.blockcypher.com/btc/block/", "https://chain.so/block/BTC/", "https://btc.blockr.io/block/info/"][items.btcExplorer-1],
+        	"QRGenerator": ["https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=", "http://chart.apis.google.com/chart?cht=qr&chs=400x400&chl=", "http://qrickit.com/api/qr?qrsize=400&d="][items.qrGenerator-1],
         };
 		var sendtoConfig = {
 			"BTC":"bitcoin:",
@@ -74,19 +77,19 @@ function contextClickHandler(info, tab) {
 			});
 		} */
 		else if (itemID == "autoLookup") {
-			if(sText.replace(/ /g,'').match(/^[13][a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+			if(sText.match(/^[13][a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		        // Bitcoin Address
 		        url = lookupConfig["BTCAddress"];
 		    }
-		    else if(sText.replace(/ /g,'').match(/^L[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+		    else if(sText.match(/^L[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		    	// Litecoin Address
 		    	url = lookupConfig["LTCAddress"];
 		    }
-		    else if(sText.replace(/ /g,'').match(/^D[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+		    else if(sText.match(/^D[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		    	// Dogecoin Address
 		    	url = lookupConfig["DOGEAddress"];
 		    }
-		    else if(sText.replace(/ /g,'').match(/^[A-Fa-f0-9]{64}$/)) {
+		    else if(sText.match(/^[A-Fa-f0-9]{64}$/)) {
 		    	// SHA256 Hash - Assuming TXID
 		    	url = lookupConfig["BTCTX"];
 		    }
@@ -97,15 +100,15 @@ function contextClickHandler(info, tab) {
 		    }
 		}
 		else if (itemID == "autoSendto") {
-			if(sText.replace(/ /g,'').match(/^[13][a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+			if(sText.match(/^[13][a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		        // Bitcoin Address
 		        url = sendtoConfig["BTC"];
 		    }
-		    else if(sText.replace(/ /g,'').match(/^L[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+		    else if(sText.match(/^L[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		    	// Litecoin Address
 		    	url = sendtoConfig["LTC"];
 		    }
-		    else if(sText.replace(/ /g,'').match(/^D[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
+		    else if(sText.match(/^D[a-km-zA-HJ-NP-Z1-9]{26,33}$/)) {
 		    	// Dogecoin Address
 		    	url = sendtoConfig["DOGE"];
 		    }
@@ -114,6 +117,9 @@ function contextClickHandler(info, tab) {
 		        alert("Please select a valid address (bitcoin, litecoin, or dogecoin only).");
 		        return 0;
 		    }
+		}
+		else if (itemID == "generateQR") {
+			url = lookupConfig["QRGenerator"];
 		}
 
 		url += sText;

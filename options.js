@@ -5,12 +5,14 @@ function save_options() {
     var btcExplorer = document.getElementById('btc_explorer').value;
     var ltcExplorer = document.getElementById('ltc_explorer').value;
     var dogeExplorer = document.getElementById('doge_explorer').value;
+    var qrGenerator = document.getElementById('qr_generator').value;
 
     chrome.storage.sync.set({
         "extensionEnabled": extensionEnabled,
         "btcExplorer": btcExplorer,
         "ltcExplorer": ltcExplorer,
-        "dogeExplorer": dogeExplorer
+        "dogeExplorer": dogeExplorer,
+        "qrGenerator": qrGenerator
     }, function() {
         // Update status to let user know options were saved.
         document.getElementById('status').innerHTML = "<p>Options saved.</p>";
@@ -33,12 +35,14 @@ function restore_options() {
         "extensionEnabled": true,
         "btcExplorer": "1",
         "ltcExplorer": "1",
-        "dogeExplorer": "1"
+        "dogeExplorer": "1",
+        "qrGenerator": "1"
     }, function(items) {
         document.getElementById('enable_extension').checked = items.extensionEnabled;
         document.getElementById('btc_explorer').value = items.btcExplorer;
         document.getElementById('ltc_explorer').value = items.ltcExplorer;
         document.getElementById('doge_explorer').value = items.dogeExplorer;
+        document.getElementById('qrGenerator').value = items.qrGenerator;
     });
 }
 
