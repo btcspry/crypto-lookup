@@ -1,0 +1,31 @@
+/*
+** file: css/options.css
+** description: custom styling for "html/options.html" file
+*/
+
+div#options-outer {
+    margin: 5px;
+    background: #DDD;
+    border-radius: 5px;
+}
+
+div#options-inner {
+    padding: 8px;
+}
+
+div#options-page-title {
+}
+
+div#options-area {
+    margin-top: 10px;
+}
+
+div.page-title {
+    font-size: 20px;
+    line-height: 24px;
+}
+
+div.page-subtitle {
+    font-size: 16px;
+    line-height: 20px;
+}
