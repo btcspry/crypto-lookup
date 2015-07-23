@@ -38,15 +38,15 @@ function contextClickHandler(info, tab) {
 
 		// Build configs based on options from the options window
         var lookupConfig = {
-        	"BTCAddress": ["https://blockchain.info/address/", "https://live.blockcypher.com/btc/address/", "https://chain.so/address/BTC/", "https://btc.blockr.io/address/info/"][items.btcExplorer-1],
+        	"BTCAddress": ["https://blockchain.info/address/", "https://live.blockcypher.com/btc/address/", "https://chain.so/address/BTC/", "https://btc.blockr.io/address/info/", "https://www.blocktrail.com/BTC/address/"][items.btcExplorer-1],
         	"LTCAddress": ["https://block-explorer.com/address/", "https://live.blockcypher.com/ltc/address/", "https://chain.so/address/LTC/", "https://ltc.blockr.io/address/info/"][items.ltcExplorer-1],
         	"DOGEAddress": ["https://dogechain.info/address/", "https://live.blockcypher.com/doge/address/", "https://chain.so/address/DOGE/"][items.dogeExplorer-1],
 
-        	"BTCTX": ["https://blockchain.info/tx/", "https://live.blockcypher.com/btc/tx/", "https://chain.so/tx/BTC/", "https://btc.blockr.io/tx/info/"][items.btcExplorer-1],
+        	"BTCTX": ["https://blockchain.info/tx/", "https://live.blockcypher.com/btc/tx/", "https://chain.so/tx/BTC/", "https://btc.blockr.io/tx/info/", "https://www.blocktrail.com/BTC/tx/"][items.btcExplorer-1],
         	"LTCTX": ["https://block-explorer.com/tx/", "https://live.blockcypher.com/ltc/tx/", "https://chain.so/tx/LTC/", "https://ltc.blockr.io/tx/info/"][items.ltcExplorer-1],
         	"DOGETX": ["https://dogechain.info/tx/", "https://live.blockcypher.com/doge/tx/", "https://chain.so/tx/DOGE/"][items.dogeExplorer-1],
 
-        	"BTCBlock": ["https://blockchain.info/block/", "https://live.blockcypher.com/btc/block/", "https://chain.so/block/BTC/", "https://btc.blockr.io/block/info/"][items.btcExplorer-1],
+        	"BTCBlock": ["https://blockchain.info/block/", "https://live.blockcypher.com/btc/block/", "https://chain.so/block/BTC/", "https://btc.blockr.io/block/info/", "https://www.blocktrail.com/BTC/block/"][items.btcExplorer-1],
         	"QRGenerator": ["https://api.qrserver.com/v1/create-qr-code/?size=400x400&data=", "http://chart.apis.google.com/chart?cht=qr&chs=400x400&chl=", "http://qrickit.com/api/qr?qrsize=400&d="][items.qrGenerator-1],
         };
 		var sendtoConfig = {
