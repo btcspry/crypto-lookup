@@ -8,18 +8,25 @@
         <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"></link>
         <link rel="stylesheet" type="text/css" href="/css/options.css"></link>
     </head>
-    <body>
-            <div id="options-outer">
-            <div id="options-inner">
-                <div id="options-page-title" class="page-title">CryptoLookup Configuration Options</div>
-                <div id="options-page-subtitle" class="page-subtitle">Enable Extension</div>
+    <body style="background-color:#3CF">
+            <div id="options-outer" style="width:50%;text-align:center;margin:20px auto;">
+              <div id="options-inner">
+                <div id="options-page-title" style="font-size:18pt;" class="page-title">Crypto Lookup Chrome Extension</div>
+                <img src="/images/logo-440-280.jpg" style="height:15%;width:15%;margin-top:10px;margin-bottom:20px;">
+
+                <div id="options-page-subtitle" style="font-size:16pt;" class="page-subtitle">Information</div>
                 <div id="options-area">
-                    <input type="checkbox" id="enable_extension" />
+                    <p>This Google Chrome extension aims to help bitcoiners interact with bitcoin-related content on websites by allowing for easier browsing and previewing of addresses, transactions, and block found on websites.</p>
+                    <p>However, it was not free to develop.  Please consider donating to the project at <b>1MF7hKShzq2iSV9ZZ9hEx6ATnHQpFtM7cF</b> (you can use the extension to send to this address).  If you have a comment, question, or suggestion, send us an email at <a href="mailto:btcspry@bitforwarder.com">btcspry@bitforwarder.com</a>, or open an issue on our <a target="_blank" href="https://github.com/btcspry/crypto-lookup">GitHub repo</a>.</p>
+                    <p>While the project works very well, we're always looking for developers and users to view the code and make suggestions on our <a target="_blank" href="https://github.com/btcspry/crypto-lookup">GitHub project</a>!  Thanks for using CryptoLookup!
                 </div>
-                <br>
-                <div id="options-page-subtitle" class="page-subtitle">Configuration Settings</div>
+                <br><br>
+
+                <div id="options-page-subtitle" style="font-size:16pt;" class="page-subtitle">Block Explorer Settings</div>
                 <div id="options-area">
-                    <label for="btc_explorer">Bitcoin Block Explorer: </label>
+                    Enable Extension: <input type="checkbox" id="enable_extension" /><br><br>
+
+                    <label for="btc_explorer">Bitcoin Block Explorer</label>
                     <select id="btc_explorer">
                       <option value="1">Blockchain.info</option>
                       <option value="2">BlockCypher</option>
@@ -27,25 +34,26 @@
                       <option value="4">Blockr</option>
                       <option value="5">BlockTrail</option>
                     </select>
-                    <br>
+                    <br><br>
 
-                    <label for="ltc_explorer">Litecoin Block Explorer: </label>
+                    <label for="ltc_explorer">Litecoin Block Explorer</label>
                     <select id="ltc_explorer">
                       <option value="1">block-explorer.com</option>
                       <option value="2">BlockCypher</option>
                       <option value="3">Chain.so</option>
                       <option value="4">Blockr</option>
                     </select>
-                    <br>
+                    <br><br>
 
-                    <label for="doge_explorer">Dogecoin Block Explorer: </label>
+                    <label for="doge_explorer">Dogecoin Block Explorer</label>
                     <select id="doge_explorer">
                       <option value="1">Dogechain.info</option>
                       <option value="2">BlockCypher</option>
                       <option value="3">Chain.so</option>
                     </select>
+                    <br><br>
 
-                    <label for="qr_generator">QR Code Generator API: </label>
+                    <label for="qr_generator">QR Code Generator API</label>
                     <select id="qr_generator">
                       <option value="3">QRickit.com</option>
                       <option value="1">QRServer.com</option>
