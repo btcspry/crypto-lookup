@@ -3,7 +3,7 @@
 
   "name": "Crypto Lookup",
   "description": "This Google Chrome extension allows you to view bitcoin and altcoin addresses, transactions (txid), and blocks (block hashes).",
-  "version": "0.2",
+  "version": "0.2.1",
 
   "icons": {
     "16": "images/logo-16.png",
