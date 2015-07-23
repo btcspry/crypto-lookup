@@ -18,7 +18,7 @@ function contextClickHandler(info, tab) {
         "btcExplorer": "1",
         "ltcExplorer": "1",
         "dogeExplorer": "1",
-        "qrGenerator": "1"
+        "qrGenerator": "3"
     }, function(items) {
 
     	// The following static object is for debugging, and is replaced by the definition based on options stored in chrome.storage.sync

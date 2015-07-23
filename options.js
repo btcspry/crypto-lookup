@@ -36,7 +36,7 @@ function restore_options() {
         "btcExplorer": "1",
         "ltcExplorer": "1",
         "dogeExplorer": "1",
-        "qrGenerator": "1"
+        "qrGenerator": "3"
     }, function(items) {
         document.getElementById('enable_extension').checked = items.extensionEnabled;
         document.getElementById('btc_explorer').value = items.btcExplorer;
