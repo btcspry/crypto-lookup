@@ -12,8 +12,6 @@
   },
 
   "permissions": [
-    "<all_urls>",
-    "tabs",
     "storage",
     "contextMenus"
   ],
@@ -22,13 +20,6 @@
     "scripts": ["libs/underscore-min.js","libs/contextManagement.js","background.js"],
     "persistent": false
   },
-
-   "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["libs/underscore-min.js", "libs/jquery-2.1.4.min.js", "content.js"]
-    }
-  ],
 
   "options_page": "options.html"
 
