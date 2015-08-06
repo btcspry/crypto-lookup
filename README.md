@@ -1,6 +1,6 @@
 # Crypto Lookup - Google Chrome Extension
 
-This Google Chrome extension allows you to view bitcoin and altcoin addresses, transactions (txid), and blocks (block hashes).
+This Google Chrome extension allows you to view bitcoin and altcoin addresses, transactions (txid), and blocks (block hashes).  Being available on the Chrome App store, you can download it at: https://chrome.google.com/webstore/detail/crypto-lookup/inmhajodfjajjahndjoiebifcbokioim
 
 To get started, install the extension in Chrome, right click on a bitcoin address, and allow us to make your life a little easier!
 
